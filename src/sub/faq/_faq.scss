@@ -1,0 +1,385 @@
+.faq {
+    width: 100%;
+
+    .visual_sub {
+        background: url(../img/bg15.jpg) no-repeat center/cover;
+    }
+
+    .inner {
+        .faq_toggle {
+            width: 1180px;
+            margin: 100px auto;
+
+            dl {
+                width: 100%;
+                border-top: 2px solid #222;
+                position: relative;
+
+                dt {
+                    width: 100%;
+                    height: 70px;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    font: 16px/30px 'Open Sans';
+                    font-weight: 500;
+                    color: #111;
+                    border-bottom: 1px solid #ddd;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    &::before {
+                        content: 'Q. ';
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    &.on {
+
+                        dt {
+                            background: pink;
+                        }
+                    }
+
+                    i {
+                        float: right;
+                        font-size: 20px;
+                        color: #333;
+                    }
+                }
+
+                dd {
+                    width: 100%;
+                    padding: 60px;
+                    box-sizing: border-box;
+                    background: #f6f6f6;
+                    font: 16px/1.7 'Open Sans';
+                    color: #555;
+                    border-bottom: 1px solid #444;
+                    display: none;
+
+                    &::before {
+                        display: block;
+                        content: 'A. ';
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    &:nth-of-type(1) {
+                        display: block;
+                    }
+                }
+            }
+
+            img {
+                width: 49%;
+                height: 100%;
+            }
+        }
+
+        .wrap {
+            &::after {
+                display: block;
+                content: '';
+                clear: both;
+            }
+
+            .faq_contact {
+                width: 49%;
+                background: rgba(255, 255, 255, 0);
+                padding: 40px;
+                float: left;
+                background: #eee;
+
+                h2 {
+                    font: 45px/1 'Playfair Display';
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font: 17px/1.2 'Open Sans';
+                    margin-bottom: 40px;
+                }
+
+                input[type=text],
+                input[type=email] {
+                    width: 376px;
+                    height: 40px;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    margin-right: 20px;
+                    font: 15px/1 'Open Sans';
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 200px;
+                    padding: 20px;
+                    font: 15px/1 'Open Sans';
+                    border: 1px solid #ccc;
+                    resize: none;
+                    margin-bottom: 20px;
+                }
+
+                input[type=submit] {
+                    width: 160px;
+                    height: 40px;
+                    background: #111;
+                    font: 15px/1 'Open Sans';
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                }
+
+            }
+
+            .faq_info {
+                width: 49%;
+                float: right;
+                padding: 60px 20px;
+
+                .faq_info_content_box {
+                    margin-bottom: 60px;
+
+                    .faq_info_desc {
+                        width: 160px;
+                        display: inline-block;
+                        margin-right: 20px;
+                        position: relative;
+
+
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        .faq_icon {
+                            width: 70px;
+                            height: 70px;
+                            border: 2px solid #eee;
+                            border-radius: 50%;
+                            margin: 0 auto;
+                            margin-bottom: 20px;
+                            position: relative;
+                        }
+
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 27px;
+                            color: #555;
+                            z-index: -1;
+                        }
+
+                        h3 {
+                            font: bold 17px/1 'Open Sans';
+                            color: #111;
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            font: 14px/1.3 'Open Sans';
+                            color: #333;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .faq_info_text_box {
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        top: -35px;
+                        color: #efefef;
+                        z-index: -1;
+                        font-size: 60px;
+                    }
+
+                    p {
+                        font: 15px/1.5 'Open Sans';
+                        margin-bottom: 32px;
+                        margin-left: 40px;
+                    }
+                }
+
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .faq {
+
+        .inner {
+            width: 100%;
+            padding: 60px 30px;
+
+            .faq_toggle {
+                width: 100%;
+                margin: 80px auto;
+
+                dl {
+                    width: 100%;
+
+                    dt {
+                        font: 14px/30px 'Open Sans';
+
+                        &:nth-of-type(3),
+                        &:nth-of-type(7) {
+                            height: 90px;
+                        }
+
+                    }
+
+                    dd {
+                        font: 14px/1.7 'Open Sans';
+                        padding: 40px;
+
+                    }
+                }
+
+            }
+
+            .wrap {
+                .faq_contact {
+                    width: 100%;
+
+                    h2 {
+                        font: 40px/1 'Playfair Display';
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font: 15px/1.2 'Open Sans';
+                    }
+
+                    input[type=text],
+                    input[type=email] {
+                        font: 14px/1 'Open Sans';
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 170px;
+                        font: 14px/1 'Open Sans';
+                    }
+
+                    input[type=submit] {
+                        font: 14px/1 'Open Sans';
+                    }
+
+                }
+
+                .faq_info {
+                    width: 100%;
+
+                    .faq_info_content_box {
+
+                        .faq_info_desc {
+                            width: 31%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .faq {
+
+        .inner {
+
+            .faq_toggle {
+                margin: 60px auto;
+
+                dl {
+
+                    dt {
+                        font: 14px/5px 'Open Sans';
+                        height: 50px;
+
+                        &:nth-of-type(3),
+                        &:nth-of-type(4),
+                        &:nth-of-type(6),
+                        &:nth-of-type(7) {
+                            font: 14px/20px 'Open Sans';
+                            height: 90px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .wrap {
+                .faq_contact {
+                    width: 100%;
+                    padding: 30px;
+
+                    input[type=text],
+                    input[type=email] {
+                        width: 100%;
+                        font: 14px/1 'Open Sans';
+                    }
+                }
+
+                .faq_info {
+                    width: 100%;
+                    padding: 0;
+                    margin-top: 60px;
+
+                    img {
+                        height: 250px;
+                    }
+
+                    .faq_info_content_box {
+
+                        .faq_info_desc {
+                            width: 30%;
+                            margin-right: 10px;
+
+                            p {
+                                font: 13px/1.2 'Open Sans';
+                            }
+
+                            .faq_icon {
+                                width: 60px;
+                                height: 60px;
+
+                                i {
+                                    font-size: 25px;
+                                }
+
+                                .faq_info_text_box {
+                                    font: 14px/1.5 'Open Sans'
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

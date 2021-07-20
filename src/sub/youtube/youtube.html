@@ -1,0 +1,53 @@
+<include src="../header/header.html"></include>
+
+<section class="content youtube">
+    <div class="visual_sub"></div>
+    <div class="breadcrumb">
+        <div class="breadcrumb_inner">
+            <a href="index.html"></a>
+            <select name="" id="">
+                <option value="">YOUTUBE</option>
+                <option value="">YOUTUBE1</option>
+                <option value="">YOUTUBE2</option>
+            </select>
+            <select name="" id="">
+                <option value="">VIDEO</option>
+                <option value="">VIDEO1</option>
+                <option value="">VIDEO2</option>
+            </select>
+        </div>
+    </div>
+    <div class="inner">
+        <h1>YOUTUBE</h1>
+        <div class="youtube_box">
+
+        </div>
+        <div class="youtube_sub">
+            <img src="img/youtube.jpeg" alt="유튜브 하단 이미지">
+            <div class="youtube_sub_content">
+                <h2>SUBSCRIBE</h2>
+                <input type="email" placeholder="Enter a valid email address">
+                <input type="text" placeholder="Enter your Name">
+                <input type="submit" name="youtube_submit" id="youtube_submit" value="submit">
+                <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <div class="sns">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $(".youtube").myYoutube({
+            key: "AIzaSyCvUYwoHL7TEB_VC5_YN3dUujxEgItvs58",
+            playList: "PL5uS0BZeM8zWRrSFpY1t-O01zt_-wflm2",
+        });
+    });
+</script>
+
+<script defer src="js/sub/youtube/youtube.js"></script>
+<include src="../footer/footer.html"></include>

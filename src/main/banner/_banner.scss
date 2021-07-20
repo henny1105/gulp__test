@@ -1,0 +1,111 @@
+// banner
+#banner {
+    width: 100%;
+    padding: 150px 0;
+    background: url(../img/bg27.jpg) no-repeat center/cover fixed;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.459);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        .text_box {
+            h3 {
+                font: 15px/1 'Open Sans';
+                font-weight: 300;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font: 30px/1 'Open Sans';
+                font-weight: 600;
+                color: #fff;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            a {
+                display: block;
+                width: 150px;
+                height: 40px;
+                border: 1px solid #fff;
+                text-align: center;
+                font: 15px/40px 'Open Sans';
+                color: #fff;
+                margin: 0 auto;
+                transition: all 0.5s;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.8);
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+// tablet
+@media screen and (max-width: $tablet) {
+// banner
+#banner {
+    padding: 100px 0;
+
+    .inner {
+        width: 100%;
+    }
+}
+}
+
+// mobile
+@media screen and (max-width: $mobile) {
+// banner
+#banner {
+    .inner {
+        .text_box {
+            h3 {
+                font: 13px/1 'Open Sans';
+                font-weight: 300;
+            }
+
+            h2 {
+                font: 20px/1.3 'Open Sans';
+                font-weight: 600;
+            }
+
+            a {
+                height: 35px;
+                font: 14px/35px 'Open Sans';
+            }
+        }
+    }
+}
+}

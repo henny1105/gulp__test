@@ -1,0 +1,818 @@
+.department {
+    width: 100%;
+
+    .visual_sub {
+        background: url(../img/bg3.jpeg) no-repeat center/cover;
+    }
+
+    .inner {
+        .division {
+            padding-top: 100px;
+
+            .div_tree {
+                position: relative;
+
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+
+                .div_1depth {
+                    text-align: center;
+
+                    .pic {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background: url(../img/profile1.jpg) no-repeat center/cover;
+                        text-align: center;
+                        margin: 0 auto;
+                        margin-bottom: 10px;
+                        position: relative;
+                    }
+
+                    >span {
+                        display: block;
+                        font: bold 17px/1 'Open Sans';
+                        color: #222;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font: 14px/1 'Open Sans';
+                        color: #444;
+                    }
+
+                    >ul {
+                        margin-top: 48px;
+                        position: relative;
+
+                        &::after {
+                            display: block;
+                            content: '';
+                            clear: both;
+                        }
+
+                        .div_2depth {
+                            float: left;
+                            width: 49%;
+
+                            .pic {
+                                position: relative;
+
+                                &::before {
+                                    display: block;
+                                    content: '';
+                                    position: absolute;
+                                    top: -22%;
+                                    left: 50%;
+                                    height: 18px;
+                                    border: 1px solid #ccc;
+                                }
+
+                                &::after {
+                                    display: block;
+                                    content: '';
+                                    position: absolute;
+                                    top: -22%;
+                                    left: 50%;
+                                    width: 578px;
+                                    border: 1px solid #ccc;
+                                }
+                            }
+
+
+
+                            &:nth-of-type(1) {
+                                .pic {
+                                    background: url(../img/profile2.jpg) no-repeat center/cover;
+                                }
+
+                                >span {
+
+                                    display: block;
+                                    font: bold 17px/1 'Open Sans';
+                                    color: #222;
+                                    margin-bottom: 5px;
+                                }
+
+                                .div_3depth {
+                                    &:nth-of-type(1) {
+                                        .pic {
+                                            background: url(../img/profile4.jpg) no-repeat center/cover;
+                                        }
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        .pic {
+                                            background: url(../img/profile5.jpg) no-repeat center/cover;
+                                        }
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        .pic {
+                                            background: url(../img/profile6.jpg) no-repeat center/cover;
+                                        }
+                                    }
+                                }
+
+
+                            }
+
+                            &:nth-of-type(2) {
+                                .pic {
+                                    background: url(../img/profile3.jpg) no-repeat center/cover;
+
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+
+                                .div_3depth {
+                                    &:nth-of-type(1) {
+                                        .pic {
+                                            background: url(../img/profile7.jpg) no-repeat center/cover;
+                                        }
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        .pic {
+                                            background: url(../img/profile8.jpg) no-repeat center/cover;
+                                        }
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        .pic {
+                                            background: url(../img/profile9.jpg) no-repeat center/cover;
+                                        }
+                                    }
+                                }
+
+                                >span {
+
+
+                                    display: block;
+                                    font: bold 17px/1 'Open Sans';
+                                    color: #222;
+                                    margin-bottom: 5px;
+
+                                }
+                            }
+
+
+                            >ul {
+                                margin-top: 48px;
+                                position: relative;
+
+                                .div_3depth {
+                                    float: left;
+                                    width: 33.333%;
+                                    text-align: center;
+
+
+                                    >span {
+                                        display: block;
+                                        font: bold 17px/1 'Open Sans';
+                                        color: #222;
+                                        margin-bottom: 5px;
+                                    }
+
+                                    >ul {
+                                        margin-top: 48px;
+
+                                        .div_4depth {
+                                            height: 40px;
+                                            margin-right: 10px;
+                                            background: #eee;
+                                            margin-bottom: 10px;
+
+                                            >span {
+                                                display: block;
+                                                font: 15px/40px 'Open Sans';
+                                                color: #222;
+                                                margin-bottom: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .depertment_history {
+        background: #eee;
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+            padding: 60px 0;
+
+            span {
+                font: 15px/1 'Open Sans';
+                text-align: left;
+                letter-spacing: 3px;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font: bold 40px/1 'Playfair Display';
+                text-align: left;
+                margin-bottom: 50px;
+            }
+
+            .wrap {
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+
+                img {
+                    width: 580px;
+                    height: 300px;
+                    object-fit: cover;
+                    float: left;
+                }
+
+                .swiper-container {
+                    width: 580px;
+                    height: 300px;
+                    float: right;
+                    background: #fff;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            padding: 60px;
+
+                            h3 {
+                                font: bold 50px/1 'Open Sans';
+                                color: #222;
+                                margin-bottom: 20px;
+                            }
+
+                            p {
+                                font: 15px/1.5s 'Open Sans';
+                                color: #333;
+                            }
+                        }
+                    }
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        &::after {
+                            font-size: 30px;
+                        }
+
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+
+    .team_content {
+        padding: 80px 0;
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+            padding: 0;
+
+            h2 {
+                font: bold 40px/1 'Playfair Display';
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            >p {
+                font: 15px/1.3 'Open Sans';
+                text-align: center;
+                margin: 20px 200px 50px;
+            }
+
+            .wrap {
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+
+                article {
+                    width: 380px;
+                    height: 430px;
+                    border: 1px solid #ddd;
+                    float: left;
+                    margin-right: 20px;
+                    padding: 20px;
+                    text-align: center;
+
+                    &:nth-of-type(3) {
+                        margin-right: 0;
+                    }
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        margin-bottom: 15px;
+                    }
+
+                    h3 {
+                        font: bold 18px/1 'Open Sans';
+                        color: #222;
+                    }
+
+                    span {
+                        font: 13px/1 'Open Sans';
+                        color: #333;
+                    }
+
+                    p {
+                        font: 14px/1 'Open Sans';
+                        color: #999;
+                        margin-top: 10px;
+                        margin-bottom: 39px;
+                        font-style: italic;
+                    }
+
+                    a {
+                        i {
+                            font-size: 18px;
+                            color: #333;
+                            margin-right: 5px;
+                            transition: all 0.5s;
+
+                            &:hover {
+                                color: #777;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .department {
+    
+        .inner {
+            width: 100%;
+            padding: 80px 30px;
+
+            .division {
+                padding-top: 50px;
+    
+                .div_tree {    
+                    .div_1depth {
+                        text-align: center;
+    
+                        .pic {
+                            display: none;
+                        }
+    
+                        >span {
+                            width: 100%;
+                            height: 50px;
+                            background: #999;
+                            font: bold 20px/50px 'Open Sans';
+                            border-radius: 5px;
+                        }
+    
+                        p {
+                            font: 14px/1 'Open Sans';
+                            color: #444;
+                        }
+    
+                        >ul {
+                            margin-top: 30px;
+
+                            li{
+                                &:nth-of-type(2) {
+                                    float: right;
+                                }
+                            }
+    
+                            .div_2depth {
+                                float: left;
+    
+                                .pic {    
+                                    &::before {
+                                        display: none;
+                                    }
+    
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+    
+
+                                &:nth-of-type(1) {
+                                    >span {
+                                        width: 98%;
+                                        height: 50px;
+                                        background: #bbb;
+                                        font: bold 17px/50px 'Open Sans';
+                                        border-radius: 5px;
+                                        margin-right: 10px;
+                                    }
+    
+    
+                                }
+    
+                                &:nth-of-type(2) {
+    
+                                    >span {
+                                        width: 98%;
+                                        height: 50px;
+                                        background: #bbb;
+                                        font: bold 17px/50px 'Open Sans';
+                                        border-radius: 5px;
+    
+                                    }
+                                }
+    
+    
+                                >ul {
+                                    margin-top: 30px;
+
+                                    .div_3depth {
+                                        float: left;
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: 30px;
+
+                                        .comm_officer {
+                                            margin-top: 50px;
+                                        }
+
+                                        .te_officer {
+                                            margin-top: 50px;
+                                        }
+    
+                                        >span {
+                                            width: 98%;
+                                            height: 50px;
+                                            background: #ddd;
+                                            font: bold 17px/50px 'Open Sans';
+                                            border-radius: 5px;
+                                            margin-right: 10px;
+                                        }
+    
+                                        >ul {
+                                            margin-top: 25px;
+    
+                                            .div_4depth {
+                                                height: 40px;
+                                                margin-right: 10px;
+                                                background: #eee;
+                                                margin-bottom: 10px;
+                                                float: none;
+    
+                                                >span {
+                                                    font: 14px/40px 'Open Sans';
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .depertment_history {
+    
+            .inner {
+                width: 100%;
+                padding: 60px 30px;
+    
+                span {
+                    font: 13px/1 'Open Sans';
+                    margin-bottom: 20px;
+                }
+    
+                h2 {
+                    font: bold 35px/1 'Playfair Display';
+                    margin-bottom: 30px;
+                }
+    
+                .wrap {
+    
+                    img {
+                        width: 49%;
+                        height: 270px;
+                    }
+    
+                    .swiper-container {
+                        width: 49%;
+                        height: 270px;
+    
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                padding: 40px;
+    
+                                h3 {
+                                    font: bold 40px/1 'Open Sans';
+                                    margin-bottom: 20px;
+                                }
+    
+                                p {
+                                    font: 15px/1.5 'Open Sans';
+                                }
+                            }
+                        }
+    
+                        .swiper-button-next,
+                        .swiper-button-prev {
+                            &::after {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .team_content {    
+            .inner {
+                width: 100%;
+                padding: 80px 30px;
+    
+                h2 {
+                    font: bold 35px/1 'Playfair Display';
+                    margin-bottom: 20px;
+                }
+    
+                >p {
+                    font: 14px/1.3 'Open Sans';
+                    margin: 20px 20px 50px 20px;
+                }
+    
+                .wrap {
+
+                    article {
+                        width: 30%;
+                        height: 430px;
+                        padding: 20px;
+    
+                        img {
+                            width: 170px;
+                            height: 170px;
+                            margin-bottom: 10px;
+                        }
+    
+                        h3 {
+                            font: bold 16px/1 'Open Sans';
+                        }
+    
+                        p {
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 539px) {
+    .department {
+
+
+        .inner {
+            width: 100%;
+            padding: 80px 30px;
+
+            .division {
+                padding-top: 50px;
+    
+                .div_tree {    
+                    .div_1depth {
+                        text-align: center;
+    
+                        .pic {
+                            display: none;
+                        }
+    
+                        >span {
+                            width: 100%;
+                            height: 40px;
+                            background: #999;
+                            font: bold 17px/40px 'Open Sans';
+                            border-radius: 5px;
+                        }
+    
+                        p {
+                            font: 14px/1 'Open Sans';
+                            color: #444;
+                        }
+    
+                        >ul {
+                            margin-top: 30px;
+
+                            li{
+                                &:nth-of-type(2) {
+                                    float: right;
+                                }
+                            }
+    
+                            .div_2depth {
+                                float: left;
+    
+                                .pic {    
+                                    &::before {
+                                        display: none;
+                                    }
+    
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+    
+
+                                &:nth-of-type(1) {
+                                    >span {
+                                        width: 98%;
+                                        height: 40px;
+                                        background: #bbb;
+                                        font: bold 17px/40px 'Open Sans';
+                                        border-radius: 5px;
+                                        margin-right: 10px;
+                                    }
+    
+    
+                                }
+    
+                                &:nth-of-type(2) {
+    
+                                    >span {
+                                        width: 98%;
+                                        height: 40px;
+                                        background: #bbb;
+                                        font: bold 17px/40px 'Open Sans';
+                                        border-radius: 5px;
+    
+                                    }
+                                }
+    
+    
+                                >ul {
+                                    margin-top: 30px;
+
+                                    .div_3depth {
+                                        float: left;
+                                        width: 100%;
+                                        text-align: center;
+                                        margin-bottom: 30px;
+
+                                        .comm_officer {
+                                            margin-top: 50px;
+                                        }
+
+                                        .te_officer {
+                                            margin-top: 50px;
+                                        }
+    
+                                        >span {
+                                            width: 98%;
+                                            height: 40px;
+                                            background: #ddd;
+                                            font: bold 17px/40px 'Open Sans';
+                                            border-radius: 5px;
+                                            margin-right: 10px;
+                                        }
+    
+                                        >ul {
+                                            margin-top: 25px;
+    
+                                            .div_4depth {
+                                                height: 40px;
+                                                margin-right: 10px;
+                                                background: #eee;
+                                                margin-bottom: 10px;
+                                                float: none;
+    
+                                                >span {
+                                                    font: 14px/40px 'Open Sans';
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .depertment_history {
+            .inner {
+                padding: 50px 30px;
+
+                h2 {
+                    font: bold 30px/1 'Playfair Display';
+                }
+    
+                .wrap {
+    
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        margin-bottom: 20px;
+                    }
+    
+                    .swiper-container {
+                        width: 100%;
+    
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                padding: 20px;
+    
+                                h3 {
+                                    font: bold 35px/1 'Open Sans';
+                                    margin-bottom: 20px;
+                                }
+    
+                                p {
+                                    font: 14px/1.5 'Open Sans';
+                                }
+                            }
+                        }
+    
+                        .swiper-button-next,
+                        .swiper-button-prev {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .team_content {
+
+            padding: 0;
+    
+            .inner {
+    
+                h2 {
+                    font: bold 30px/1 'Playfair Display';
+                }
+    
+                >p {
+                    margin: 0;
+                    font: 14px/1.3 'Open Sans';
+                    margin-bottom: 30px;
+                }
+    
+                .wrap {
+                    article {
+                        width: 100%;
+                        height: 270px;
+                        padding: 10px;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+    
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            margin-bottom: 10px;
+                        }
+    
+                        h3 {
+                            font: bold 16px/1 'Open Sans';
+                            margin-bottom: 10px;
+                        }
+
+                        span {
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            margin: 0;
+                            margin-bottom: 10px;
+                        }
+    
+
+                        i {
+                            font-size: 15px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

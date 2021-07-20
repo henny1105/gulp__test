@@ -1,0 +1,693 @@
+.map {
+    width: 100%;
+
+    .visual_sub {
+        background: url(../img/bg17.jpg) no-repeat center/cover;
+    }
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 100px 0;
+        position: relative;
+
+        #map {
+            width: 100%;
+            height: 500px;
+            background: #111;
+        }
+
+        .tab1 {
+            .location_tab {
+                width: 100%;
+                text-align: center;
+                margin: 60px 0 60px 0;
+
+                &::after {
+                    display: block;
+                    clear: both;
+                    content: '';
+                }
+
+                li {
+                    width: 33.3%;
+                    height: 73px;
+                    text-align: center;
+                    float: left;
+                    border: 1px solid #aaa;
+
+                    &:nth-of-type(2) {
+                        border-right: 0;
+                    }
+
+                    a {
+                        height: 73px;
+                        font: 16px/73px 'Noto Sans KR';
+                        color: #aaa;
+                        display: block;
+                    }
+
+                    &.on {
+                        border-top: 2px solid #000;
+                        border-bottom: none;
+
+                        a {
+                            color: #333;
+                        }
+                    }
+                }
+            }
+
+            .group {
+                .group_top {
+                    width: 100%;
+                    height: 60px;
+                    background: #eee;
+                    position: relative;
+
+                    h2 {
+                        position: absolute;
+                        top: 20px;
+                        left: 42px;
+                        font: bold 20px/1 'Montserrat';
+                    }
+
+                    .fa-search {
+                        position: absolute;
+                        top: 24px;
+                        left: 509px;
+                        z-index: 2;
+                    }
+
+                    input {
+                        position: absolute;
+                        top: 16px;
+                        left: 505px;
+                        border: none;
+                        border-bottom: 1px solid #bbb;
+                        background: #eee;
+                        width: 200px;
+                        height: 30px;
+                        padding-left: 32px;
+                        font: 15px/1 'Montserrat';
+                        color: #222;
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 22px;
+                        right: 187px;
+                        font: bold 15px/1 'Montserrat';
+                    }
+
+                    select {
+                        top: 16px;
+                        right: 51px;
+                        position: absolute;
+                        padding-left: 10px;
+                        font: 13px/1 'Montserrat';
+                        width: 120px;
+                        height: 30px;
+                        border: none;
+                        background: #ddd;
+                    }
+                }
+
+                table {
+                    width: 100%;
+
+                    tr {
+                        border-bottom: 1px solid #ccc;
+
+                        td {
+                            padding: 10px 10px;
+                            text-align: center;
+
+                            img {
+                                width: 50px;
+                                border-radius: 5px;
+                            }
+
+                            &:nth-of-type(1) {
+                                width: 10%;
+                                position: relative;
+                                color: #fff;
+                                font: bold 15px/1 'Open Sans';
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 10%;
+
+                                p {
+                                    &:nth-of-type(1) {
+                                        font: bold 30px/1 'Open Sans';
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        font: 14px/1 'Open Sans';
+                                    }
+                                }
+                            }
+
+                            &:nth-of-type(3) {
+                                width: 10%;
+                            }
+
+                            &:nth-of-type(4) {
+                                width: 15%;
+                                padding-left: 10px;
+
+                                ul {
+                                    text-align: left;
+
+                                    li {
+                                        &:nth-of-type(1) {
+                                            font: bold 18px/1 'Montserrat';
+                                            color: #222;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        &:nth-of-type(2) {
+                                            font: 15px/1 'Open Sans';
+                                            color: #444;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        &:nth-of-type(3) {
+                                            font: 15px/1 'Open Sans';
+                                            color: #444;
+
+                                            i {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+
+
+                            &:nth-of-type(6) {
+                                width: 15%;
+                                font: 15px/1 'Open Sans';
+                                position: relative;
+
+                                i {
+                                    color: #222;
+                                }
+                            }
+
+                            &:nth-of-type(8) {
+                                width: 15%;
+                                font: 15px/1 'Open Sans';
+                                position: relative;
+
+                                i {
+                                    color: #222;
+                                }
+                            }
+
+                            &:nth-of-type(9) {
+                                a {
+                                    display: block;
+                                    width: 149px;
+                                    height: 35px;
+                                    background: #111;
+                                    font: 14px/35px 'Open Sans';
+                                    color: #fff;
+                                    text-align: center;
+                                    margin: 0 auto;
+                                    transition: all 0.5s;
+
+                                    &:hover {
+                                        background: #666;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .circle,
+                    .circle2,
+                    .circle3,
+                    .circle4 {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        z-index: -1;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .circle {
+                        background: #ff4c4c;
+                    }
+
+                    .circle2 {
+                        background: #77c7f6;
+                    }
+
+                    .circle3 {
+                        background: #f8e722;
+                    }
+
+                    .circle4 {
+                        background: #3be272;
+                    }
+                }
+
+                .profile {
+                    padding-top: 80px;
+
+                    h2 {
+                        font: bold 40px/1 'Playfair Display';
+                        color: #444;
+                        margin-bottom: 20px;
+                        padding: 10px;
+                        background: #eee;
+                    }
+
+                    >p {
+                        font: 15px/1.3 'Open Sans';
+                        color: #444;
+                        margin-bottom: 50px;
+                    }
+
+                    .wrap {
+                        &::after {
+                            display: block;
+                            content: '';
+                            clear: both;
+                        }
+
+                        article {
+                            width: 280px;
+                            margin-right: 20px;
+                            float: left;
+                            border: 1px solid #ccc;
+                            padding: 20px;
+
+                            img {
+                                width: 100%;
+                                height: 200px;
+                                object-fit: cover;
+                                margin-bottom: 10px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+
+                            h3 {
+                                font: bold 17px/1 'Montserrat';
+                                margin-bottom: 10px;
+
+                                &::before {
+                                    display: block;
+                                    content: '';
+                                    width: 100%;
+                                    border: 1px solid #444;
+                                    margin-bottom: 15px;
+                                }
+
+                                .square {
+                                    display: inline-block;
+                                    width: 10px;
+                                    height: 10px;
+                                    background: red;
+                                    border-radius: 2px;
+                                }
+                            }
+
+                            p {
+                                &:nth-of-type(1) {
+                                    font: 12px/1 'Open Sans';
+                                    color: #777;
+
+                                    &::after {
+                                        display: block;
+                                        content: '';
+                                        width: 100%;
+                                        border: 1px solid #444;
+                                        margin-bottom: 15px;
+                                        margin-top: 10px;
+                                    }
+                                }
+
+                                &:nth-of-type(2) {
+                                    font: 13px/1.4 'Open Sans';
+                                    color: #555;
+                                }
+
+                            }
+
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 30px;
+                                background: #eee;
+                                font: 14px/30px 'Open Sans';
+                                color: #444;
+                                text-align: center;
+                                margin-top: 10px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    background: #ccc;
+                                }
+
+                                i {
+                                    font-size: 10px;
+                                    color: #555;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            .square {
+                                display: inline-block;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 2px;
+                            }
+
+                            &:nth-of-type(1) {
+                                .square {
+                                    background: #ff4c4c;
+                                }
+                            }
+
+                            &:nth-of-type(2) {
+                                .square {
+                                    background: #77c7f6;
+                                }
+                            }
+
+                            &:nth-of-type(3) {
+                                .square {
+                                    background: #f8e722;
+                                }
+                            }
+
+                            &:nth-of-type(4) {
+                                margin-right: 0;
+
+                                .square {
+                                    background: #3be272;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+                >div {
+                    width: 100%;
+                    color: #222;
+                    display: none;
+
+                    &.on {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 1179px) {
+    .map {
+        .inner {
+            width: 100%;
+            padding: 60px 30px;
+
+            #map {
+                width: 100%;
+                height: 500px;
+                background: #111;
+            }
+
+            .tab1 {
+                .location_tab {
+                    li {
+                        height: 60px;
+
+                        a {
+                            height: 60px;
+                            font: 16px/60px 'Noto Sans KR';
+                        }
+                    }
+                }
+
+                .group {
+                    .group_top {
+                        .fa-search {
+                            left: 41%;
+                        }
+
+                        input {
+                            left: 40%;
+                        }
+
+                        h2 {
+                            font-size: 22px;
+                        }
+                    }
+
+                    table {
+                        tr {
+                            td {
+                                &:nth-of-type(1) {
+                                    font: bold 14px/1 'Open Sans';
+                                }
+
+                                &:nth-of-type(2) {
+                                    width: 10%;
+
+                                    p {
+                                        &:nth-of-type(1) {
+                                            font: bold 35px/1 'Open Sans';
+                                        }
+
+                                        &:nth-of-type(2) {
+                                            font: 13px/1 'Open Sans';
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(3) {
+                                    width: 10%;
+                                }
+
+                                &:nth-of-type(4) {
+                                    width: 20%;
+                                    padding-left: 10px;
+
+                                    ul {
+                                        text-align: left;
+
+                                        li {
+                                            &:nth-of-type(1) {
+                                                font: bold 16px/1 'Montserrat';
+                                            }
+
+                                            &:nth-of-type(2) {
+                                                font: 14px/1 'Open Sans';
+                                            }
+
+                                            &:nth-of-type(3) {
+                                                font: 14px/1 'Open Sans';
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(5) {
+                                    display: none;
+                                }
+
+                                &:nth-of-type(6) {
+                                    font: 14px/1 'Open Sans';
+                                }
+
+                                &:nth-of-type(7) {
+                                    display: none;
+                                }
+
+                                &:nth-of-type(8) {
+                                    font: 14px/1 'Open Sans';
+                                }
+
+                                &:nth-of-type(9) {
+                                    a {
+                                        width: 130px;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .profile {
+                        padding: 80px 0;
+
+                        h2 {
+                            font: bold 35px/1 'Playfair Display';
+                        }
+
+                        >p {
+                            font: 15px/1.3 'Open Sans';
+                        }
+
+                        .wrap {
+                            article {
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .map {
+        .inner {
+            width: 100%;
+
+            #map {
+                height: 300px;
+            }
+
+            .tab1 {
+                .location_tab {
+                    margin: 60px 0 30px 0;
+
+                    li {
+                        height: 50px;
+
+                        a {
+                            height: 50px;
+                            font: 15px/50px 'Noto Sans KR';
+                        }
+                    }
+                }
+
+                .group {
+                    .group_top {
+                        .fa-search {
+                            display: none;
+                        }
+
+                        input {
+                            display: none;
+                        }
+
+                        h2 {
+                            font-size: 22px;
+                            left: 16px;
+                        }
+
+                        span {
+                            display: none;
+                        }
+
+                        select {
+                            display: none;
+                        }
+                    }
+
+                    table {
+                        tr {
+                            td {
+                                &:nth-of-type(1) {
+                                    font: bold 14px/1 'Open Sans';
+                                }
+
+                                &:nth-of-type(2) {
+                                    width: 10%;
+
+                                    p {
+                                        &:nth-of-type(1) {
+                                            font: bold 35px/1 'Open Sans';
+                                        }
+
+                                        &:nth-of-type(2) {
+                                            font: 13px/1 'Open Sans';
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(3) {
+                                    display: none;
+                                }
+
+                                &:nth-of-type(4) {
+                                    width: 20%;
+                                    padding-left: 10px;
+
+                                    ul {
+
+                                        li {
+                                            text-align: center;
+
+                                            &:nth-of-type(1) {
+                                                font: bold 15px/1 'Montserrat';
+                                            }
+
+                                            &:nth-of-type(2) {
+                                                display: none;
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(9) {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .profile {
+
+                        h2 {
+                            font: bold 30px/1 'Playfair Display';
+                        }
+
+                        >p {
+                            font: 14px/1.3 'Open Sans';
+                        }
+
+                        .wrap {
+                            article {
+                                .bg {
+                                    display: none;
+                                }
+
+                                a {
+                                    width: 100%;
+                                }
+
+                                p {
+                                    &:nth-of-type(2) {
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

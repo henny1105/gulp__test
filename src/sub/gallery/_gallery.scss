@@ -1,0 +1,304 @@
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    opacity: 0;
+
+    &.on {
+        opacity: 1;
+    }
+}
+
+.gallery {
+    width: 100%;
+
+    .visual_sub {
+        background: url(../img/bg16.jpg) no-repeat center/cover;
+    }
+
+
+    .inner {
+        >h1 {
+            margin-bottom: 90px;
+        }
+
+        >img{
+            width: 120px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .search {
+            margin-bottom: 50px;
+
+            .community_search-bar {
+                width: 340px;
+                height: 50px;
+                background-color: #f5f5f5;
+                font: 16px/1 'Noto Sans KR';
+                font-weight: 300;
+                border: none;
+                padding: 0 16px;
+            }
+
+            button {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: #f5f5f5;
+                border: none;
+
+                i {
+                    font-size: 25px;
+                    color: #333;
+                }
+            }
+        }
+
+        .gallery_list {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: 1s;
+
+            &.on {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            ul {
+                width: 100%;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                li {
+                    float: left;
+                    padding: 10px;
+                    height: 300px;
+                    box-sizing: border-box;
+                    width: 33.333%;
+
+                    &.item-sizer {
+                        width: 33.333%;
+                        opacity: 0;
+                    }
+                    
+                    &:nth-of-type(2) {
+                        width: 66.666%;
+                    }
+
+                    &:nth-of-type(4) {
+                        height: 600px;
+                    }
+
+                    &:nth-of-type(5) {
+                        width: 66.666%;
+                    }
+
+                    &:nth-of-type(7) {
+                        height: 600px;
+                    }
+
+                    &:nth-of-type(10) {
+                        width: 100%;
+                    }
+
+                    &:nth-of-type(11) {
+                        width: 66.666%;
+                    }
+
+                    &:nth-of-type(13) {
+                        height: 600px;
+                    }
+
+                    &:nth-of-type(16) {
+                        width: 66.666%;
+                    }
+
+                    
+                    >.inner {
+                        width: 100%;
+                        height: 100%;
+                        background: #b8b8b8;
+                        position: relative;
+                        overflow: hidden;
+
+                        >a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            opacity: 1;
+
+
+                            &::after{
+                                display: block;
+                                content: '';
+                                transition: all 1s;
+                            }
+
+                            >img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        p {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0;
+                            font: bold 17px/1 "Open Sans";
+                            color: #222;
+                            transition: 0.5s;
+                        }
+
+                        .profile {
+                            position: absolute;
+                            top: 65%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0;
+                            transition: 0.5s 0.2s;
+                            cursor: pointer;
+
+                            img {
+                                display: none;
+                            }
+
+                            span {
+                                font: 14px/1 "Open Sans";
+                                color: #222;
+                                opacity: 0.7;
+                                position: relative;
+                                top: -18px;
+                            }
+                        }
+
+                        &:hover {
+                            >a {
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.6);
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+                            }
+
+                            p {
+                                top: 45%;
+                                opacity: 1;
+                                color: #ccc;
+                            }
+
+                            .profile {
+                                opacity: 1;
+                                top: 60%;
+
+                                span {
+                                    color: #aaa;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .gallery {    
+        .inner {
+            width: 100%;
+            padding: 60px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .gallery {
+        .inner {
+
+            .search {
+    
+                .community_search-bar {
+                    width: 85%;
+                    height: 40px;
+                    font: 15px/1 'Noto Sans KR';
+                }
+    
+                button {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #f5f5f5;
+                    border: none;
+    
+                    i {
+                        font-size: 23px;
+                        color: #333;
+                    }
+                }
+            }
+    
+            .gallery_list {
+                ul {
+                    li {
+                        width: 100%;
+                        height: 300px;
+
+                        &:nth-of-type(2) {
+                            width: 100%;
+                        }
+    
+                        &:nth-of-type(4) {
+                            height: 300px;
+                        }
+    
+                        &:nth-of-type(5) {
+                            width: 100%;
+                        }
+    
+                        &:nth-of-type(7) {
+                            height: 300px;
+                        }
+    
+                        &:nth-of-type(10) {
+                            width: 100%;
+                        }
+    
+                        &:nth-of-type(11) {
+                            width: 100%;
+                        }
+    
+                        &:nth-of-type(13) {
+                            height: 300px;
+                        }
+    
+                        &:nth-of-type(16) {
+                            width: 100%;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
+}

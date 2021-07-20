@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+// reset
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
+}
+
+fieldset {
+    border: none;
+}
+
+input,
+a,
+button {
+    outline: 1;
+}
+
+.h {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+}
+
+$tablet : 1179px;
+$mobile : 539px;
+
+//main scss연결
+@import "main/header/header";
+@import "main/visual/visual";
+@import "main/brand/brand";
+@import "main/about_us/about_us";
+@import "main/business/business";
+@import "main/process/process";
+@import "main/banner/banner";
+@import "main/contact/contact";
+@import "main/subscribe/subscribe";
+
+
+//sub scss연결
+@import "sub/data/cookie";
+@import "sub/header/header";
+@import "sub/department/department";
+@import "sub/members/members";
+@import "sub/youtube/youtube";
+@import "sub/gallery/gallery";
+@import "sub/faq/faq";
+@import "sub/community/community";
+@import "sub/location/location";
+@import "sub/footer/footer";
+
+// sub_content
+.content {
+    width: 100%;
+
+    .visual_sub {
+        width: 100%;
+        height: 300px;
+    }
+
+    .breadcrumb {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        .breadcrumb_inner {
+            width: 1180px;
+            margin: 0 auto;
+
+            a {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background: url(../img/ico-home.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+
+            select {
+                width: 200px;
+                height: 48px;
+                vertical-align: top;
+                border: none;
+                border-right: 1px solid #ddd;
+                font: 15px/1 'Open Sans';
+                padding-left: 20px;
+            }
+        }
+    }
+
+    > .inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 100px 0;
+
+        h1 {
+            position: relative;
+            text-align: center;
+            font: 48px/1 'Roboto';
+            font-weight: 500;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 73px;
+                left: 50%;
+                margin-left: -54px;
+                width: 107px;
+                border: 1px solid #000;
+                border-radius: 2px;
+            }
+        }
+    }
+
+}
+
+// tablet
+@media screen and (max-width: $tablet){
+    .content {
+        .visual_sub {
+            height: 30vh;
+        }
+
+        .breadcrumb {
+            height: 42px;
+
+            .breadcrumb_inner {
+                width: 100%;
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                select {
+                    height: 40px;
+                    font: 14px/1 'Open Sans';
+                }
+            }
+        }
+
+        .inner {
+            h1 {
+                font: 40px/1 'Roboto';
+                font-weight: 500;
+
+                &::after {
+                    top: 54px;
+                }
+            }
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: $mobile){
+    .content {
+        .visual_sub {
+            height: 25vh;
+        }
+
+        .breadcrumb {
+            .breadcrumb_inner {
+                select {
+                    width: 40%;
+                }
+            }
+        }
+
+        .inner {
+            h1 {
+                font: 30px/1 'Roboto';
+                font-weight: 500;
+
+                &::after {
+                    top: 43px;
+                }
+            }
+        }
+    }
+}

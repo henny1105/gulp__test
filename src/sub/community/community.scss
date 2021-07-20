@@ -1,0 +1,526 @@
+.community {
+    width: 100%;
+
+    .visual_sub {
+        background: url(../img/bg20.jpeg) no-repeat center/cover;
+    }
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+
+        .tab {
+            .community_tab {
+                width: 100%;
+                text-align: center;
+                margin: 90px 0 60px 0;
+
+                &::after {
+                    display: block;
+                    clear: both;
+                    content: '';
+                }
+
+                li {
+                    width: 49%;
+                    height: 73px;
+                    text-align: center;
+                    float: left;
+
+                    a {
+                        display: block;
+                        height: 73px;
+                        font: 16px/73px 'Noto Sans KR';
+                        color: #aaa;
+                        border: 1px solid #aaa;
+
+                        &.on {
+                            border-top: 2px solid #000;
+                            color: #333;
+                            border-bottom: 0;
+                        }
+                    }
+
+
+                }
+            }
+
+            .community_search {
+                text-align: center;
+                margin-bottom: 35px;
+
+                select {
+                    width: 130px;
+                    height: 50px;
+                    text-align: left;
+                    font: 16px/1 'Noto Sans KR';
+                    border: 1px solid #666;
+                    padding: 0 16px;
+                }
+
+                .community_search-bar {
+                    width: 340px;
+                    height: 50px;
+                    background-color: #f5f5f5;
+                    font: 16px/1 'Noto Sans KR';
+                    font-weight: 300;
+                    border: none;
+                    padding: 0 16px;
+                }
+
+                button {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background-color: #f5f5f5;
+                    border: none;
+
+                    i {
+                        font-size: 25px;
+                        color: #333;
+                    }
+                }
+            }
+
+            .community_search_mobile {
+                display: none;
+            }
+
+            .total {
+                font: 15px/1 'Noto Sans KR';
+
+                span {
+                    font: 15px/1 'Noto Sans KR';
+                    color: #ea2125;
+                }
+            }
+
+
+            table {
+                width: 100%;
+                border-bottom: 2px solid #111;
+                margin-bottom: 50px;
+                border-collapse: collapse;
+                border-bottom: 1px solid #ddd;
+                margin-top: 20px;
+
+                thead {
+                    tr {
+                        th {
+                            font: 15px/1 'Noto Sans KR';
+                            font-weight: 400;
+                            color: #222;
+                            border-top: 2px solid #000;
+                            padding: 20px 0;
+                            text-align: center;
+
+                            &:nth-of-type(1) {
+                                width: 10%;
+                            }
+
+                            &:nth-of-type(3) {
+                                width: 10%;
+                            }
+
+                            &:nth-of-type(4) {
+                                width: 10%;
+                            }
+
+                            &:nth-of-type(5) {
+                                width: 10%;
+                            }
+
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            font: 15px/1 'Noto Sans KR';
+                            font-weight: 300;
+                            padding: 20px 0;
+                            border-top: 1px solid #eee;
+                            color: #555;
+                            text-align: center;
+
+                            a {
+                                font: 15px/1 'Noto Sans KR';
+                                font-weight: 300;
+                                color: #555;
+                                float: left;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >div {
+                display: none;
+
+                &.on {
+                    display: block;
+                }
+            }
+
+
+
+        }
+
+        .pagination {
+            width: 100%;
+            text-align: center;
+
+            .prev2 {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                font: 14px/40px 'Noto Sans KR';
+                font-weight: 400;
+                color: #777;
+                text-align: center;
+                border: 1px solid #e0e0e0;
+                position: relative;
+                vertical-align: bottom;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .prev {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                font: 14px/40px 'Noto Sans KR';
+                font-weight: 400;
+                color: #777;
+                text-align: center;
+                border: 1px solid #e0e0e0;
+                position: relative;
+                vertical-align: bottom;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+
+            .next {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                font: 14px/40px 'Noto Sans KR';
+                font-weight: 400;
+                color: #777;
+                text-align: center;
+                border: 1px solid #e0e0e0;
+                position: relative;
+                vertical-align: bottom;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+
+            .next2 {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                font: 14px/40px 'Noto Sans KR';
+                font-weight: 400;
+                color: #777;
+                text-align: center;
+                border: 1px solid #e0e0e0;
+                position: relative;
+                vertical-align: bottom;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+
+            .numbers {
+                font-size: 0;
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    font: 14px/40px 'Noto Sans KR';
+                    font-weight: 400;
+                    color: #777;
+                    text-align: center;
+                    margin: 0 2px;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        background: #111;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .community {
+        .inner {
+            width: 100%;
+            padding: 80px 30px;
+            box-sizing: border-box;
+
+            .tab {
+                .community_tab {
+                    li {
+                        width: 49%;
+                        height: 60px;
+                        text-align: center;
+                        float: left;
+    
+                        a {
+                            display: block;
+                            height: 60px;
+                            font: 16px/60px 'Noto Sans KR';
+                            color: #aaa;
+                            border: 1px solid #aaa;
+    
+                            &.on {
+                                border-top: 2px solid #000;
+                                color: #333;
+                                border-bottom: 0;
+                            }
+                        }
+    
+    
+                    }
+                }
+    
+                table {
+                    width: 100%;
+    
+                    th {
+    
+                        &:nth-of-type(1) {
+                            width: 10%;
+                        }
+    
+                        &:nth-of-type(3) {
+                            width: 10%;
+                        }
+    
+                        &:nth-of-type(4) {
+                            width: 10%;
+                        }
+    
+                        &:nth-of-type(5) {
+                            width: 0%;
+                            display: none;
+                        }
+    
+                    }
+    
+                    tr {
+                        td {
+    
+                            &:nth-of-type(5) {
+                                width: 0%;
+                                display: none;
+                            }
+    
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .community {
+        .inner {
+            width: 100%;
+            padding: 50px 30px;
+            box-sizing: border-box;
+
+            .tab {
+                .community_tab {
+                    width: 100%;
+                    margin: 70px 0 40px 0;
+    
+                    li {
+                        width: 49%;
+                        height: 50px;
+                        text-align: center;
+                        float: left;
+    
+                        a {
+                            display: block;
+                            height: 50px;
+                            font: 16px/50px 'Noto Sans KR';
+                            color: #aaa;
+                            border: 1px solid #aaa;
+    
+                            &.on {
+                                border-top: 2px solid #000;
+                                color: #333;
+                                border-bottom: 0;
+                            }
+                        }
+    
+    
+                    }
+                }
+    
+                .community_search {
+                    display: none;
+                }
+    
+                .community_search_mobile {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 35px;
+    
+                    .community_search-bar_m {
+                        float: left;
+                        width: 80%;
+                        height: 40px;
+                        background-color: #f5f5f5;
+                        font: 14px/1 'Noto Sans KR';
+                        font-weight: 300;
+                        border: 1px solid #eee;
+                        border-right: 0;
+                        padding: 0 16px;
+                    }
+    
+                    button {
+                        float: left;
+                        position: relative;
+                        width: 19%;
+                        height: 40px;
+                        background-color: #f5f5f5;
+                        border: 1px solid #eee;
+                        border-left: 0;
+                        cursor: pointer;
+    
+                        i {
+                            font-size: 22px;
+                            z-index: 2;
+                        }
+                    }
+                }
+    
+                .total {
+                    font: 13px/1 'Noto Sans KR';
+                }
+    
+                table {
+                    width: 100%;
+    
+                    th {
+                        font: 14px/1 'Noto Sans KR';
+                        padding: 15px 5px;
+    
+                        &:nth-of-type(1) {
+                            width: 10%;
+                        }
+    
+                        &:nth-of-type(3) {
+                            width: 10%;
+                        }
+    
+                        &:nth-of-type(4) {
+                            width: 0%;
+                            display: none;
+                        }
+    
+                    }
+    
+                    tr {
+    
+                        td {
+                            font: 14px/1 'Noto Sans KR';
+                            font-weight: 300;
+                            padding: 20px 5px;
+    
+                            a {
+                                font: 14px/1 'Noto Sans KR';
+                                font-weight: 300;
+                            }
+    
+                            &:nth-of-type(4) {
+                                width: 0%;
+                                display: none;
+                            }
+    
+                        }
+                    }
+                }
+            }
+
+            .pagination {
+                .prev2 {
+                    width: 30px;
+                    height: 30px;
+                    font: 14px/30px 'Noto Sans KR';
+
+                }
+
+                .prev {
+                    width: 30px;
+                    height: 30px;
+                    font: 14px/30px 'Noto Sans KR';
+                }
+
+                .next {
+                    width: 30px;
+                    height: 30px;
+                    font: 14px/30px 'Noto Sans KR';
+                }
+
+                .next2 {
+                    width: 30px;
+                    height: 30px;
+                    font: 14px/30px 'Noto Sans KR';
+                }
+
+                .numbers {
+
+                    a {
+                        width: 30px;
+                        height: 30px;
+                        font: 14px/30px 'Noto Sans KR';
+                    }
+
+                    @for $i from 6 through 10 {
+                        :nth-of-type(#{$i}) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,231 @@
+#footer_sub {
+    width: 100%;
+    background: #4e4d53;
+
+    .upper {
+        border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+        padding: 20px 0;
+
+        &::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+
+            .upper_left {
+                .footer_link {
+                    li {
+                        float: left;
+
+                        span {
+                            position: relative;
+                            margin: 0 10px;
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: 5px;
+                                right: 0;
+                                width: 1px;
+                                height: 14px;
+                                background: #aaa;
+                                opacity: 0.3;
+                            }
+                        }
+
+                        a {
+                            font: 14px/1 'Montserrat';
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+
+            .upper_right {
+                .footer_sns {
+                    li {
+                        float: right;
+                        margin-right: 20px;
+
+                        i {
+                            font-size: 20px;
+                            color: #aaa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lower {
+        padding: 30px 0;
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+
+            .wrap {
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+
+                .lower_left {
+                    float: left;
+
+                    .footer_info {
+                        h1 {
+                            font: bold 25px/1 'Nanum Myeongjo';
+                            letter-spacing: 2px;
+                            color: #ccc;
+                            margin-bottom: 25px;
+                            display: inline-block;
+                        }
+
+                        .footer_info_desc {
+                            float: right;
+
+                            dl {
+                                float: left;
+                                margin-left: 130px;
+                                margin-right: 50px;
+
+                                dt {
+                                    margin-bottom: 20px;
+
+                                    a {
+                                        font: 17px/1 'Montserrat';
+                                        font-weight: 700;
+                                        color: #eee;
+                                    }
+                                }
+
+                                dd {
+                                    margin-bottom: 5px;
+
+                                    a {
+                                        font: 15px/1 'Montserrat';
+                                        color: #ddd;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .lower_right {
+                    .footer_site {
+                        select {
+                            float: right;
+                            width: 250px;
+                            padding: 5px 10px;
+                            background: transparent;
+                            font: 14px/1 'Montserrat';
+                            color: #bbb;
+                            border: 1px solid rgb(153, 153, 153);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lower_copyright {
+        width: 100%;
+        padding: 5px;
+        background: #94929c48;
+
+        p {
+            font: 13px/30px 'Montserrat';
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+
+    // footer
+    #footer_sub {
+        .upper {
+            padding: 20px 30px;
+
+            .inner {
+                width: 100%;
+            }
+        }
+
+        .lower {
+            padding: 20px 30px;
+
+            .inner {
+                width: 100%;
+
+                .wrap {
+                    .lower_left {
+                        .footer_info {
+                            h1 {
+                                font: bold 20px/1 'Nanum Myeongjo';
+                            }
+
+                            .footer_info_desc {
+                                dl {
+                                    margin-left: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+
+    // footer
+    #footer_sub {
+        .upper {
+            .inner {
+                .upper_right {
+                    display: none;
+                }
+            }
+        }
+
+        .lower {
+            padding: 20px 30px;
+
+            .inner {
+                width: 100%;
+
+                .wrap {
+                    .lower_left {
+                        .footer_info {
+                            h1 {
+                                font: bold 20px/1 'Nanum Myeongjo';
+                            }
+
+                            .footer_info_desc {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .lower_copyright {
+            p {
+                font: 12px/30px 'Montserrat';
+            }
+        }
+    }
+}

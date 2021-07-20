@@ -1,0 +1,436 @@
+.members {
+    width: 100%;
+
+    .visual_sub {
+        background: url(../img/bg13.jpg) no-repeat center/cover;
+    }
+
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+
+        form {
+            margin-top: 50px;
+
+            fieldset {
+                .title {
+                    font: bold 22px/1 'Noto Sans KR';
+                    color: #333;
+                    display: inline-block;
+                }
+
+                .title_right {
+                    font: 13px/1 'Noto Sans KR';
+                    color: #333;
+                    float: right;
+                }
+
+                textarea#terms {
+                    width: 100%;
+                    height: 200px;
+                    background: #efefef;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    font: 12px/1.6 'Noto Sans KR';
+                    color: #444;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                }
+
+                .header_title {
+                    &::after {
+                        display: block;
+                        content: '';
+                        width: 100%;
+                        border-bottom: 1px solid #333;
+                        margin-top: 10px;
+                    }
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    border-bottom: 1px solid #333;
+                    margin-bottom: 80px;
+
+                    &:nth-of-type(1) tr:nth-of-type(1) {
+                        border-bottom: 1px solid #ccc;
+                    }
+
+                    &:nth-of-type(1) {
+                        margin-bottom: 0;
+                    }
+
+                    tr {
+                        th {
+                            font: 16px/1 'Noto Sans KR';
+                            font-weight: 500;
+                            color: #222;
+                            padding: 20px 80px 20px 10px;
+                            text-align: left;
+
+                            &.sub_tit {
+                                font: 16px/1 'Noto Sans KR';
+                                font-weight: 500;
+                                color: #222;
+                            }
+                        }
+
+                        td {
+                            padding: 15px 0 15px 0;
+
+                            .sub_desc {
+                                font: 13px/1 'Noto Sans KR';
+                                font-weight: 400;
+                                color: #666;
+                            }
+
+                            >p {
+                                font: 14px/1 'Noto Sans KR';
+                                color: #333;
+                                font-weight: 400;
+                            }
+
+                            .user_check_desc {
+                                font: 12px/1 'Noto Sans KR';
+                                font-weight: 400;
+                                color: #444;
+                                text-align: left;
+                                margin-bottom: 5px;
+
+                                &:nth-of-type(2) {
+                                    margin-top: 10px;
+                                }
+                            }
+
+                            >span {
+                                font: 15px/1 'Noto Sans KR';
+                                color: #555;
+                                font-weight: 500;
+                            }
+
+                            .ckbox {
+                                font: 14px/1 'Noto Sans KR';
+                                color: #555;
+                            }
+
+                            .user_check_error {
+                                font: 12px/1 'Noto Sans KR';
+                                color: hotpink;
+                                display: none;
+                            }
+
+                            .user_check_error,
+                            .user_text_error,
+                            .password_len_error,
+                            .password_num_error,
+                            .password_txt_error,
+                            .password_sc_error {
+                                font: 12px/1 'Noto Sans KR';
+                                color: hotpink;
+                                display: none;
+                            }
+
+                            input[type=text],
+                            input[type=password] {
+                                width: 150px;
+                                height: 35px;
+                                padding: 0 8px;
+                                border: 1px solid #ccc;
+                                background: #f5f5f5;
+
+                                &.error {
+                                    background: #fff3fe;
+                                    border: 1px solid #ffa8ff;
+                                }
+                            }
+
+                            select {
+                                width: 150px;
+                                height: 35px;
+                                padding: 0 8px;
+                                border: 1px solid #ccc;
+
+                                &.error {
+                                    background: #fff3fe;
+                                    border: 1px solid #ffa8ff;
+                                }
+                            }
+
+                            #user_address2,
+                            #user_address3 {
+                                width: 60%;
+                            }
+
+                            .btn {
+                                display: inline-block;
+                                vertical-align: top;
+                                width: 80px;
+                                height: 35px;
+                                font: 14px/35px 'Noto Sans KR';
+                                text-align: center;
+                                color: #444;
+                                padding: 0 8px;
+                                background: #ddd;
+                                border: 1px solid #ccc;
+                            }
+
+                            .btn_address {
+                                display: inline-block;
+                                vertical-align: top;
+                                width: 120px;
+                                height: 35px;
+                                font: 14px/35px 'Noto Sans KR';
+                                text-align: center;
+                                color: #444;
+                                padding: 0 8px;
+                                background: #ddd;
+                                border: 1px solid #ccc;
+                            }
+
+                            .mobile {
+                                display: none;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .help_wrap {
+                    margin-top: 10px;
+                    margin-bottom: 80px;
+
+                    li {
+                        font: 12px/1 'Noto Sans KR';
+                        color: #999;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .members_button {
+                    display: block;
+                    text-align: center;
+
+                    input[type=reset],
+                    input[type=submit] {
+                        display: inline-block;
+                        width: 170px;
+                        height: 50px;
+                        padding: 0 8px;
+                        background: #000;
+                        color: #fff;
+                        text-align: center;
+                        margin: 0 auto;
+                        border: none;
+                        font: 17px/50px 'Noto Sans KR';
+                        cursor: pointer;
+                        transition: 0.5s;
+                        border: 1px solid #000;
+                    }
+
+                    input[type=submit] {
+                        &:hover {
+                            background: #a5a5a5;
+                            color: #000;
+                            border: 1px solid #888;
+                        }
+                    }
+
+                    input[type=reset] {
+                        margin-right: 30px;
+                        background: #888;
+                        border: 1px solid #888;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1179px) {
+    .members {
+
+        .inner {
+            width: 100%;
+            padding: 60px 30px;
+
+            form {
+                fieldset {
+                    table {
+
+                        tr {
+                            th {
+                                padding: 20px 60px 20px 10px;
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px) {
+    .members {
+
+        .inner {
+            width: 100%;
+            padding: 60px 30px;
+
+            form {
+                fieldset {
+                    .title {
+                        font: bold 18px/1 'Noto Sans KR';
+                    }
+
+                    .header_title {
+                        .title_right {
+                            display: none;
+                        }
+                    }
+
+                    textarea#terms {
+                        height: 150px;
+                    }
+
+                    table {
+
+                        tr {
+                            th {
+                                display: none;
+                            }
+
+                            td {
+                                padding: 15px 0 5px 0;
+
+                                .user_check_desc {
+                                    display: none;
+                                }
+
+                                input[type=text],
+                                input[type=password] {
+                                    width: 100%;
+                                }
+
+                                .mobile {
+                                    display: inline-block;
+                                    width: 15%;
+                                    font: bold 15px/1 'Noto Sans KR';
+                                    color: #555;
+                                }
+
+                                &.mobile_phone {
+                                    select {
+                                        width: calc((100% - 30px) / 3);
+                                    }
+
+                                    input {
+                                        width: calc((100% - 40px) / 3);
+                                    }
+
+                                    .btn {
+                                        width: 100%;
+                                        margin-top: 20px;
+                                    }
+                                }
+
+                                &.sub_desc {
+                                    font: 12px/1 'Noto Sans KR';
+                                }
+
+                                #user_address3 {
+                                    width: 100%;
+                                }
+                            }
+
+                            &.id_info {
+                                td {
+                                    input {
+                                        width: calc((100% - 10px)/2);
+                                        margin-right: 10px;
+                                    }
+
+                                    a {
+                                        width: calc((100% - 25px)/2);
+                                    }
+                                }
+                            }
+
+                            &.email_info {
+                                td {
+                                    input {
+                                        width: calc((100% - 28px)/2);
+                                    }
+
+                                    select {
+                                        width: calc((100% - 25px)/2);
+                                    }
+                                }
+                            }
+
+                            &.homephone_info {
+                                td {
+                                    select {
+                                        width: calc((100% - 45px)/3);
+                                    }
+
+                                    input {
+                                        width: calc((100% - 30px)/3);
+                                    }
+
+
+                                }
+                            }
+
+                            &.address_info {
+                                .sub_tit {
+                                    width: 100%;
+                                    margin-bottom: 20px;
+                                }
+
+                                td {
+                                    input {
+                                        width: calc((100% - 5px)/2);
+                                    }
+
+                                    a {
+                                        width: calc((100% - 10px)/2);
+                                    }
+                                }
+                            }
+
+                            &.address_info_desc {
+                                td {
+                                    #user_address2 {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                    .members_button {
+                        input[type=reset] {
+                            margin-bottom: 10px;
+                        }
+
+                        input[type=reset],
+                        input[type=submit] {
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

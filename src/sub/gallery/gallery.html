@@ -1,0 +1,45 @@
+<include src="../header/header.html"></include>
+<section class="content gallery">
+    <figure class="visual_sub"></figure>
+    <div class="breadcrumb">
+        <div class="breadcrumb_inner">
+            <a href="index.html"></a>
+            <select name="" id="">
+                <option value="">GALLERY</option>
+                <option value="">GALLERY1</option>
+                <option value="">GALLERY2</option>
+            </select>
+            <select name="" id="">
+                <option value="">INFORMATION</option>
+                <option value="">INFORMATION1</option>
+                <option value="">INFORMATION2</option>
+            </select>
+        </div>
+    </div>
+    <div class="inner">
+        <h1>GALLERY</h1>
+        <div class="search">
+            <input type="text" class="community_search-bar" title="검색어를 입력해주세요" placeholder="검색어를 입력하세요."
+                id="community_search-bar" name="community_search-bar" value="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="gallery_list">
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function(){
+        $(".content .inner").myFlickr({
+            key: "1be6f1c24e114c2fd7312ada7d8dcc43",
+            gallery: ".gallery_list",
+            search: ".search",
+            count: 21,
+            enableIsotope: true
+        });
+    });
+</script>
+
+<script src="static/isotope.pkgd.min.js"></script>
+<script src="js/sub/gallery/gallery.js"></script>
+
+<include src="../footer/footer.html"></include>
