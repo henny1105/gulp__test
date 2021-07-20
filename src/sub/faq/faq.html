@@ -1,4 +1,5 @@
 <include src="../header/header.html"></include>
+
 <section class="content faq">
     <figure class="visual_sub"></figure>
     <div class="breadcrumb">
@@ -136,5 +137,16 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function () {
+        $(".faq_toggle").myToggle({
+            btn: "dt",
+            boxs: "dd",
+            active: "on"
+        });
+    });
+</script>
 <script defer src="js/sub/faq/faq.js"></script>
+
 <include src="../footer/footer.html"></include>

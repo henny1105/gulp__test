@@ -6,6 +6,10 @@
     }
 
     .inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 100px 0;
+        
         .division {
             padding-top: 100px;
 
@@ -358,10 +362,11 @@
     }
 }
 
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
     .department {
     
-        .inner {
+        > .inner {
             width: 100%;
             padding: 80px 30px;
 
@@ -585,11 +590,9 @@
     }
 }
 
-
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
     .department {
-
-
         .inner {
             width: 100%;
             padding: 80px 30px;
@@ -810,6 +813,8 @@
                             font-size: 15px;
                         }
 
+                        
+    
                     }
                 }
             }

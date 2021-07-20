@@ -20,8 +20,11 @@
         background: url(../img/bg16.jpg) no-repeat center/cover;
     }
 
-
     .inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 100px 0;
+
         >h1 {
             margin-bottom: 90px;
         }
@@ -222,7 +225,8 @@
     }
 }
 
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
     .gallery {    
         .inner {
             width: 100%;
@@ -231,12 +235,11 @@
     }
 }
 
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
     .gallery {
         .inner {
-
             .search {
-    
                 .community_search-bar {
                     width: 85%;
                     height: 40px;
@@ -294,11 +297,9 @@
                         &:nth-of-type(16) {
                             width: 100%;
                         }
-
                     }
                 }
             }
         }
     }
-    
 }

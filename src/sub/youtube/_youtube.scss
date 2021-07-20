@@ -6,6 +6,10 @@
     }
 
     .inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 100px 0;
+
         .youtube_box {
             border-bottom: 1px solid #ccc;
 
@@ -283,8 +287,8 @@
     }
 }
 
-
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
     .youtube {
         .inner {
             width: 100%;
@@ -359,7 +363,8 @@
     }
 }
 
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
     .youtube {
         .inner {
             width: 100%;

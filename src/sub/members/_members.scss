@@ -5,10 +5,10 @@
         background: url(../img/bg13.jpg) no-repeat center/cover;
     }
 
-
     .inner {
         width: 1180px;
         margin: 0 auto;
+        padding: 100px 0;
 
         form {
             margin-top: 50px;
@@ -249,8 +249,8 @@
     }
 }
 
-
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
     .members {
 
         .inner {
@@ -276,7 +276,8 @@
     }
 }
 
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
     .members {
 
         .inner {
