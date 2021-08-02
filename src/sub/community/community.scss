@@ -41,8 +41,6 @@
                             border-bottom: 0;
                         }
                     }
-
-
                 }
             }
 
@@ -96,7 +94,6 @@
                 }
             }
 
-
             table {
                 width: 100%;
                 border-bottom: 2px solid #111;
@@ -130,7 +127,6 @@
                             &:nth-of-type(5) {
                                 width: 10%;
                             }
-
                         }
                     }
                 }
@@ -167,9 +163,6 @@
                     display: block;
                 }
             }
-
-
-
         }
 
         .pagination {
@@ -214,7 +207,6 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
-
             }
 
             .next {
@@ -235,7 +227,6 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
-
             }
 
             .next2 {
@@ -256,7 +247,6 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
-
             }
 
             .numbers {
@@ -284,7 +274,8 @@
     }
 }
 
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
     .community {
         .inner {
             width: 100%;
@@ -312,8 +303,6 @@
                                 border-bottom: 0;
                             }
                         }
-    
-    
                     }
                 }
     
@@ -338,7 +327,6 @@
                             width: 0%;
                             display: none;
                         }
-    
                     }
     
                     tr {
@@ -348,17 +336,16 @@
                                 width: 0%;
                                 display: none;
                             }
-    
                         }
                     }
                 }
             }
-
         }
     }
 }
 
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
     .community {
         .inner {
             width: 100%;
@@ -389,8 +376,6 @@
                                 border-bottom: 0;
                             }
                         }
-    
-    
                     }
                 }
     
@@ -455,11 +440,9 @@
                             width: 0%;
                             display: none;
                         }
-    
                     }
     
                     tr {
-    
                         td {
                             font: 14px/1 'Noto Sans KR';
                             font-weight: 300;
@@ -474,7 +457,6 @@
                                 width: 0%;
                                 display: none;
                             }
-    
                         }
                     }
                 }
@@ -485,7 +467,6 @@
                     width: 30px;
                     height: 30px;
                     font: 14px/30px 'Noto Sans KR';
-
                 }
 
                 .prev {
@@ -507,7 +488,6 @@
                 }
 
                 .numbers {
-
                     a {
                         width: 30px;
                         height: 30px;
@@ -521,7 +501,6 @@
                     }
                 }
             }
-
         }
     }
 }

@@ -85,24 +85,23 @@
 
         }
     }
-
 }
 
 // tablet
 @media screen and (max-width: $tablet) {
- // about_us
- #about_us {
-    .inner {
-        width: 100%;
-        padding: 60px 30px;
+    // about_us
+    #about_us {
+        .inner {
+            width: 100%;
+            padding: 60px 30px;
 
-        .right {
-            >p {
-                font: 15px/1.5 'Open Sans';
+            .right {
+                >p {
+                    font: 15px/1.5 'Open Sans';
+                }
             }
         }
     }
-}
 }
 
 // mobile

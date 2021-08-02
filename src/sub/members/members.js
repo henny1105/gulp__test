@@ -38,7 +38,6 @@
             }
     
         }.bind(this));
-        // bind가 왜 쓰이는지 다시 확인해볼것!!!
     }
     
     //텍스트 인증 함수 정의
@@ -163,7 +162,6 @@
             $("select[name=" + name + "]").removeClass("error");
             $("select[name=" + name + "]").parent().find("p").hide();
             return true;
-            
         }
     }
 

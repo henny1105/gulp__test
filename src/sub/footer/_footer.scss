@@ -149,7 +149,8 @@
     }
 }
 
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
 
     // footer
     #footer_sub {
@@ -182,13 +183,13 @@
                         }
                     }
                 }
-
             }
         }
     }
 }
 
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
 
     // footer
     #footer_sub {

@@ -152,6 +152,7 @@
 
 // tablet
 @media screen and (max-width: $tablet) {
+
     // process
     #process {
         .inner {
@@ -163,28 +164,28 @@
 
 // mobile
 @media screen and (max-width: $mobile) {
-// process
-#process {
-    .inner {
-        .wrap {
-            flex-direction: column;
+    // process
+    #process {
+        .inner {
+            .wrap {
+                flex-direction: column;
 
-            article {
-                width: 100%;
-                padding: 30px 25px;
-                margin-bottom: 40px;
+                article {
+                    width: 100%;
+                    padding: 30px 25px;
+                    margin-bottom: 40px;
 
-                .mySwiper {
-                    height: 100px;
+                    .mySwiper {
+                        height: 100px;
+                    }
+                }
+            }
+
+            #clock {
+                .current_time {
+                    width: 100%;
                 }
             }
         }
-
-        #clock {
-            .current_time {
-                width: 100%;
-            }
-        }
     }
-}
 }

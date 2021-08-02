@@ -158,8 +158,6 @@
                         margin-right: 20px;
                         position: relative;
 
-
-
                         &:last-of-type {
                             margin-right: 0;
                         }
@@ -223,14 +221,13 @@
                     height: 300px;
                     object-fit: cover;
                 }
-
-
             }
         }
     }
 }
 
-@media screen and (max-width: 1179px) {
+// tablet
+@media screen and (max-width: $tablet) {
     .faq {
 
         .inner {
@@ -308,16 +305,14 @@
     }
 }
 
-@media screen and (max-width: 539px) {
+// mobile
+@media screen and (max-width: $mobile) {
     .faq {
-
         .inner {
-
             .faq_toggle {
                 margin: 60px auto;
 
                 dl {
-
                     dt {
                         font: 14px/5px 'Open Sans';
                         height: 50px;
@@ -329,11 +324,8 @@
                             font: 14px/20px 'Open Sans';
                             height: 90px;
                         }
-
                     }
-
                 }
-
             }
 
             .wrap {
@@ -358,7 +350,6 @@
                     }
 
                     .faq_info_content_box {
-
                         .faq_info_desc {
                             width: 30%;
                             margin-right: 10px;
