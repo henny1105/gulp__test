@@ -45,10 +45,10 @@ function activateBtn(scroll){
         var businessTop = $("#business").offset().top;
 
         if (scroll >= businessTop) {
-            counter(".num_1", 120, 100);
-            counter(".num_2", 90, 90);
-            counter(".num_3", 50, 80);
-            counter(".num_4", 100, 110);
+            counter(".num_1", 120, 30);
+            counter(".num_2", 90, 20);
+            counter(".num_3", 50, 10);
+            counter(".num_4", 100, 40);
         }
     }  
  }
