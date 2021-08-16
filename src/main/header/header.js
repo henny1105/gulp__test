@@ -54,6 +54,8 @@ $gnb_li.each(function(index){
         $gnb_li.eq(index).find(".sub").show();
     });
 
+    
+
     //gnb_li의 (index)번째 요소에 focusout이벤트 연결
     $gnb_li.eq(index).find("a").last().on("focusout", function(){
         $gnb_li.eq(index).find(".sub").hide();      

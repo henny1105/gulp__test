@@ -1,20 +1,8 @@
-//오늘하루 그만보기 체크한 경우 생기는 쿠키이름
-var isCookie = document.cookie.indexOf("popup=done"); 
-console.log(isCookie); 
-
-if(isCookie == -1){
-    console.log("쿠키없음"); 
-    $("#popup").show(); 
-}else{
-    console.log("쿠키있음"); 
-    $("#popup").hide(); 
-}
-
 //페이지를 로딩하자마자 팝업 함수 실행 
 createPop({
     name: "#popup",
-    data_url: "data/pop.html",
-    isMask: false,
+    data_url: "pop.html",
+    isMask:true,
     isCk: true,
     custom_css: {
         width: 400,
@@ -26,30 +14,49 @@ createPop({
     }
 });
 
+//오늘하루 그만보기 체크한 경우 생기는 쿠키이름
+var isCookie = document.cookie.indexOf("popup=done"); 
+console.log(isCookie); 
+
+if(isCookie == -1){
+    console.log("쿠키없음"); 
+    $("#popup").show(); 
+    $(".mask").show();
+}else{
+    console.log("쿠키있음"); 
+    $("#popup").hide(); 
+    $(".mask").hide();
+}
+
+$(".view").on("click", function(e){
+    e.preventDefault();
+    console.log(document.cookie);
+});
+
+$(".del").on("click", function(e){
+    e.preventDefault();
+    setCookie("popup","done",0);
+    alert("쿠키 삭제 완료!!");
+})
+
+
+
 //팝업의 클로즈버튼 클릭시 팝업 제거 
 $("body").on("click", "#popup .close", function(e){
     e.preventDefault(); 
     removePop(this); 
 });
 
-//팝업제거 함수 정의 
-function removePop(el){
-    //오늘하루 그만 보기 체크되어 있는지 값을 담음 
-    var isChecked = $(el).prev().find("input[type=checkbox]").is(":checked"); 
-    // 생성된 팝업의 아이디값을 가져와서 담음 
-    var id_name = $(el).parent().attr("id"); 
+//쿠키생성 함수 정의 - date/minutes 등 원하는 시간별로 설정
+function setCookie(cookieName, cookieVal, time){
+    var today = new Date(); 
+    var date = today.getDate(); 
 
-    //체크되어 있다면 쿠키생성 
-    if(isChecked) setCookie(id_name, "done", 1);
+    today.setDate(date + time); 
+    var duedate = today.toGMTString(); 
 
-    //팝업은 은은히 사라지게 하고 완전히 제거 
-    $(el).parent().fadeOut(500, function(){
-        $(this).remove(); 
-    }); 
-
-    $(".mask").fadeOut(500, function(){
-        $(this).remove(); 
-    })
+    //쿠키생성코드
+    document.cookie = cookieName +"="+ cookieVal +"; path=/; expires="+ duedate;
 }
 
 //팝업생성함수 
@@ -57,14 +64,15 @@ function createPop(opt){
     //디폴트 옵션 설정
     var def_opt = {
         name: "#popup",
-        data_url: "data/error.html",
+        data_url: "error.html",
         isMask: false,
         isCk: false,
         custom_css: undefined
     }
 
     //상단에서 팝업생성함수 실행시 옵션값과 합쳐서 최종 옵션값 지정 
-    var opt = Object.assign({}, def_opt, opt);
+    var opt = $.extend({}, def_opt, opt);
+    // var opt = Object.assign({}, def_opt, opt); 웹 호환성 오류
 
     //opt.isMask값에 따라 배경 막을 생성 유무 결정 
     if(opt.isMask){
@@ -154,21 +162,33 @@ function createPop(opt){
         url:opt.data_url
     })
     .success(function(data){
-        $(opt.name).find(".content").html(data); //환영합니다 데이터 
+        $(opt.name).find(".content").html(data); 
     })
     .error(function(err){
         console.log(err); // error.html의 오류구문 보여줌 
     })
 }
 
-//쿠키생성 함수 정의 - date/minutes 등 원하는 시간별로 설정
-function setCookie(cookieName, cookieVal, time){
-    var today = new Date(); 
-    var date = today.getDate(); 
+//팝업제거 함수 정의 
+function removePop(el){
+    
+    //오늘하루 그만 보기 체크되어 있는지 값을 담음 
+    var isChecked = $(el).prev().find("input[type=checkbox]").is(":checked"); 
+    // 생성된 팝업의 아이디값을 가져와서 담음 
+    var id_name = $(el).parent().attr("id"); 
 
-    today.setDate(date + time); 
-    var duedate = today.toGMTString(); 
+    //체크되어 있다면 쿠키생성 
+    if(isChecked) setCookie(id_name, "done", 1);
 
-    //쿠키생성코드
-    document.cookie = cookieName +"="+ cookieVal +"; path=/; expires="+ duedate;
+    //팝업은 은은히 사라지게 하고 완전히 제거 
+    $(el).parent().fadeOut(500, function(){
+        $(this).remove(); 
+    }); 
+
+    $(".mask").fadeOut(500, function(){
+        $(this).remove(); 
+    })
 }
+
+
+
